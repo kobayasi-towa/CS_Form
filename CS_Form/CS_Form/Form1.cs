@@ -40,11 +40,11 @@ namespace CS_Form
                 TestButton testButton = new TestButton(this, strs[i], (i % 5) * 100, (i / 5) * 100, 100, 100);
                 Controls.Add(testButton);
             }
-            
+
 
 
             _testlabel =
-                  new TestLabel("らべるです。", 10, 300, 100, 500);
+                  new TestLabel("らべるです。", 10, 330, 500, 100);
             Controls.Add(_testlabel);
 
             _testtextBox = new TestTextBox(
@@ -59,5 +59,11 @@ namespace CS_Form
             _testlabel.TextUpdate(str);
         }
 
+        public string ButtonLabelReplacement(string str)
+        {
+            string s = _testtextBox.TextReplacement(str);
+
+            return s;
+        }
     }
 }
